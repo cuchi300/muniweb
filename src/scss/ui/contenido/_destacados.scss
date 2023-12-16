@@ -1,0 +1,75 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.destacados{
+    background-image: url(../img/trofeo.png);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: 20rem 5rem;
+    @include m.tablet { 
+        background-position: 50rem 8rem;
+        background-size: 60%;
+    }
+    @include m.desktop { 
+        background-position: 80rem 5rem; 
+        background-size: 35%; 
+    }
+    &__grid{
+        @include m.tablet { 
+            @include m.grid(5,3rem);
+        }
+    }
+    &__contenido{
+        padding: 10rem 0;
+        @include m.tablet { 
+            grid-column: 1/5;   
+        }
+        @include m.desktop { 
+            grid-column: 1/4;
+        }
+
+    }
+    &__heading{
+        line-height: 1.2;
+        position: relative;
+        color: v.$celeste;
+        font-size: 4rem;
+        @include m.tablet { 
+            font-size: 5rem;
+        }
+        @include m.desktop { 
+            font-size: 6rem;
+        }
+        &::before{
+            content: '#';
+            position: absolute;
+            z-index: -1;
+            top: -6rem;
+            left: 0;
+            font-size: 12rem;
+            color: v.$grisOscuro;
+            @include m.tablet {
+                top: -8rem;
+                left: -2rem;
+                font-size: 15rem;
+            }
+            @include m.desktop {
+                top: -8rem;
+                left: -6rem;
+                font-size: 18rem;
+            }
+        }
+    }
+    &__descripcion{
+        font-size: 2.2rem;
+        margin: 3rem 0;
+        line-height: 1.8;
+        color: v.$negro;
+        @include m.desktop { 
+            font-size: 2.5rem
+        }
+    }
+    &__enlace{
+        @include m.boton(v.$celeste, v.$blanco);
+    }
+}
