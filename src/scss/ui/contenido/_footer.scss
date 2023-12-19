@@ -1,0 +1,116 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer{
+    background-color: v.$blanco;
+    padding: 2rem 0;
+    &__grid{
+        @include m.desktop{ 
+            @include m.grid(2,5rem);
+        }
+    }
+    &__widget{
+        &--dos{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__imagen-muni{
+        max-width: 25rem;
+        margin: 0 auto;
+        @include m.desktop { 
+            margin: 0;
+        }
+    }
+    &__copy{
+        text-align: center;
+        font-size: 1.8rem;
+        padding-top: 2rem;
+    }
+    &__copy-link{
+        color: v.$verde;
+    }
+    &__span{
+        font-weight: 700;
+        color: v.$celeste;
+    }
+    &__imagen{
+        margin: 3rem auto;
+        @include m.desktop { 
+            padding-top: 2rem;
+            margin: 0;
+        }
+    }
+    &__imagen-jujuy{
+        max-width: 25rem;
+        filter: brightness(.5);
+    }
+    &__social{
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        padding: 2rem 0;
+        @include m.desktop { 
+            justify-content: flex-start;
+        }
+    }
+    &__enlace{
+        font-size: 2.2rem;
+    }
+    &__contacto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        @include m.desktop { 
+            align-items: flex-start;
+        }
+    }
+    &__flex-contacto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        @include m.desktop { 
+            flex-direction: row;
+        }
+    }
+    &__icono{
+        font-size: 2.2rem;
+    }
+    &__descripcion{
+        font-size: 2rem;
+    }
+    &__mail{
+        &:hover{
+            color: v.$celeste;
+        }
+    }
+    &__face{
+        &:hover{
+            color: v.$face;
+        }
+    }
+    &__insta{
+        &:hover{
+            color: v.$insta;
+        }
+    }
+    &__twitter{
+        &:hover{
+            color: v.$twitter;
+        }
+    }
+    &__youtube{
+        &:hover{
+            color: v.$youtube;
+        }
+    }
+}
+.footer-nav{
+    flex-direction: column;
+    @include m.desktop { 
+        flex-direction: row;
+    }
+}

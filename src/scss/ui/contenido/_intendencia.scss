@@ -1,0 +1,84 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.intendencia{
+    padding: 5rem 0;
+    &::after{
+        content: 'Raúl “Chuli” Jorge';
+        text-align: center;
+        font-weight: 700;
+        font-size: 2.5rem;
+        padding-top: 1.8rem;
+        display: block;
+        position: relative;
+        height: 8rem;
+        color: v.$blanco;
+        background-color: v.$verde;
+        background-size: 20%;
+        border-radius: 0 5rem 5rem 0;
+        margin-top: 2rem;
+        width: 35rem;
+        @include m.tablet { 
+            width: 70rem;
+            font-size: 4rem;
+            padding-top: 1rem;
+        }
+    }
+    &__contenido{
+        display: grid;
+        grid-template-rows: 1fr 40rem;
+        @include m.desktop { 
+            grid-template-rows: unset;
+            @include m.grid(2,5rem);
+        }
+        position: relative;
+    }
+    &__header{
+        grid-column: 2/2;
+    }
+    &__top{
+        margin-bottom: 2rem
+    }
+    &__heading{
+        @include m.heading;
+        font-size: 3rem;
+        @include m.tablet { 
+            font-size: 4rem;
+        }
+        &::after{
+            width: 20rem;
+        }
+    }
+    &__descripcion{
+        font-size: 2rem;
+        font-weight: 700;
+        color: v.$verde;
+        @include m.desktop { 
+            font-size: 2.3rem;
+        }
+        &--body{
+            font-weight: 400;
+            color: v.$grisOscuro;
+            border-block: 1px solid v.$grisClaro;
+            padding-block: 2rem;
+            @include m.desktop { 
+                font-size: 2rem;
+            }
+        }
+    }
+    &__picture{
+        position: absolute;
+        bottom: -3rem;
+        left: -3rem;
+        @include m.tablet { 
+            left: 15rem;
+        }
+        @include m.desktop { 
+            left: 10rem;
+        }
+    }
+    &__imagen{
+        max-width: 30rem;
+        transform: rotateY(3.142rad);
+    }
+}

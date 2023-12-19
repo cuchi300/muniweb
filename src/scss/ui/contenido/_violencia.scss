@@ -1,0 +1,77 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.violencia{
+    background-image: linear-gradient(to right, transparentize(v.$negro, .3) 0%, transparentize(v.$negro, .3) 100%), url(../img/header-genero.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%, cover;
+    background-position: center, center center;
+    padding: 8rem 0;
+    color: v.$blanco;
+    &__grid{
+        @include m.desktop {
+            grid-template-rows: unset;
+            @include m.grid(2,3rem);
+        }
+    }
+    &__heading{
+        font-weight: 400;
+        font-size: 3rem;
+        margin-bottom: 5rem;
+        @include m.tablet { 
+            font-size: 5rem;         
+        }
+        @include m.desktop { 
+            margin-bottom: 0;
+        }
+    }
+    &__negrita{
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    &__span{
+        display: block;
+        color: v.$verde;
+        font-weight: 700;
+    }
+    &__contenido{
+        background-color: transparentize(v.$grisClaro, .8);
+        height: max-content;
+        padding: 3rem;
+        border-radius: 1rem;
+    }
+    &__titulo{
+        text-transform: uppercase;
+        color: v.$verde;
+        line-height: 1;
+        font-size: 2rem;
+    }
+    &__descripcion{
+        color: v.$grisClaro;
+        font-size: 1.6rem;
+        @include m.tablet { 
+            font-size: 2.2rem;
+        }
+    }
+    &__descripcion-salto{
+        display: block;
+    }
+    &__numero{
+        color: v.$verde;
+        font-weight: 700;
+    }
+    &__imagen{
+        filter: brightness(1.30);
+        padding-top: 3rem;
+        margin: 0 auto;
+        max-width: 70%;
+    }
+    &__enlace{
+        @include m.boton(v.$celeste, v.$blanco);
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        @include m.desktop { 
+            margin-bottom: 0;
+        }
+    }
+}

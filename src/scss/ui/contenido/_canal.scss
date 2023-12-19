@@ -1,0 +1,53 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.canal {
+    background-image: linear-gradient(to bottom, v.$blanco 0%, v.$blanco 55%, transparent 100%), url(../img/canal_alvarado.webp);
+    background-repeat: no-repeat;
+    background-position: 100%, -35rem bottom;
+    background-size: 100%, 308%;
+    position: relative;
+    @include m.tablet { 
+        background-position: 100%, -39rem 42rem;
+        background-size: 100%,175%;
+    }
+    @include m.desktop {
+        background-image: linear-gradient(to left, v.$blanco 0%, v.$blanco 50%, transparent 100%), url(../img/canal_alvarado.webp);
+        background-position: 100%, -50rem center;
+        background-size: 100%, 110%;
+    }
+    &__grid{
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        @include m.desktop {
+            grid-template-rows: unset;
+            @include m.grid(2,5rem);
+        }
+    }
+    &__contenido{
+        grid-column: 2/2;
+        padding: 3rem 0;
+        @include m.desktop { 
+            padding: 8rem 0; 
+        }
+    }
+    &__heading{
+        @include m.heading;
+        font-size: 3rem;
+        padding-bottom: 2rem;
+    }
+    &__descripcion{
+        padding-bottom: 2rem;
+        font-size: 1.8rem;
+    }
+    &__video{
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+    &__enlace{
+        @include m.boton(v.$celeste, v.$blanco);
+        @include m.tablet { 
+            display: inline-block;
+        }
+    }
+}

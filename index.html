@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="build/css/app.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="inicio">
         <div class="header__grid contenedor">
             <div class="header__logo" title="logo municipalidad">
                 <a href="index.html" class="hero__enlace">
@@ -27,13 +27,11 @@
             </div><!-- .header__logo -->
 
             <nav class="navegacion">
-                <a href="index.html" class="navegacion__enlace">Inicio</a>
-                <a href="index.html" class="navegacion__enlace">Directiva</a>
-                <a href="index.html" class="navegacion__enlace">Tramites y Servicios</a>
-                <a href="index.html" class="navegacion__enlace">Prensa</a>
-                <a href="index.html" class="navegacion__enlace">Contacto</a>
+                <a href="#servicios" class="navegacion__enlace">Tramites y Servicios</a>
+                <a href="#noticias" class="navegacion__enlace">Noticias</a>
+                <a href="contacto.html" class="navegacion__enlace">Contacto</a>
             </nav>
-        </div>
+        </div><!-- .header__grid -->
     </header>
 
     <section class="hero">
@@ -41,18 +39,327 @@
             <div class="hero__contenido">
                 <h1 class="hero__heading">LaMuniEn<span class="hero__span">TuBarrio</span></h1>
             </div>
-        </div>
+        </div><!-- .hero__grid -->
     </section>
+
+    <section class="intendencia">
+        <div class="intendencia__contenido contenedor">
+            <div class="intendencia__header">
+                <div class="intendencia__top">
+                    <h2 class="intendencia__heading">Intendente Municipal</h2>
+                    <p class="intendencia__descripcion">Municipalidad de San Salvador de Jujuy</p>
+                </div>
+
+                <p class="intendencia__descripcion intendencia__descripcion--body">Es vecino del barrio Los Perales. <b>Arquitecto de profesión</b>, egresó de la Universidad Nacional de Córdoba en 1981. Fue dos veces <b>presidente del Colegio de Arquitectos de Jujuy</b>. Su trabajo en la <b>función pública comenzó en la Dirección de Espacios Verdes</b>, pasando luego por la Secretaría de Obras Públicas. En 1997 es <b>elegido concejal por la Unión Cívica Radical</b>, cargo que tuvo el honor de ejercer durante 10 años consecutivos. En 2007 se presenta como <b>candidato a Intendente de la Ciudad</b>, siendo elegido por el voto popular, y reelecto en el año 2019.</p>
+            </div>
+            <div class="intendencia__picture">
+                <picture>
+                    <source srcset="build/img/img-intendente.avif" type="image/avif">
+                    <source srcset="build/img/img-intendente.webp" type="image/webp">
+                    <img class="intendencia__imagen" loading="lazy" src="build/img/img-intendente.jpg" width="500" height="300" alt="imagen intendente">
+                </picture>
+            </div>
+        </div><!-- .intendencia__contenido-->
+    </section><!-- .intendencia -->
 
     <section class="destacados">
         <div class="destacados__grid contenedor">
             <div class="destacados__contenido">
                 <h2 class="destacados__heading">Premios Adolescentes y Jovenes Destacados</h2>
                 <p class="destacados__descripcion">Con el objetivo de consolidar las virtudes y capacidades de  adolescentes y jovenes, queremos detacar y destinguir la labor que realizan con los <b>Premios Adolescentes y Jóvenes Destacados</b> de la Municipalidad de San Salvador de Jujuy, un homenaje a ese esfuerzo constante.</p>
-                <a href="#" class="destacados__enlace">Saber Mas</a>
-            </div>
+                <div class="destacados__enlaces">
+                    <a href="http://sansalvadordejujuy.gob.ar/jovenesdestacados/" class="destacados__enlace">Saber Mas</a>
+                    <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf6qrzzOMHoyLPUBlAOmwFrP38Hrah4wPG02lpKUjHGEwEeAg/viewform?pli=1" class="destacados__enlace destacados__enlace--inscripcion">Inscripciones Abiertas</a>
+                </div>
+            </div><!-- .destacados__contenido -->
+        </div><!-- .destacados__grid -->
+    </section>
+
+    <main class="menu" id="servicios">
+        <h2 class="menu__heading text-center">Tramites y Servicios</h2>
+
+        <div class="menu__grid contenedor">
+            <a href="http://sansalvadordejujuy.gob.ar/begu/">
+                <div class="seccion">
+                    <div class="seccion__imagen">
+                        <i class="seccion__icono bi bi-bus-front-fill"></i>
+                    </div>
+                    <div class="seccion__contenido">
+                        <h3 class="seccion__nombre">Begu</h3>
+                        <p class="seccion__descripcion">Boleto estudiantil gratuito universal  destinado a alumnos de todos estableciminetos educativos.</p>
+                        <div class="seccion__enlace"></div>
+                    </div>
+                </div><!-- .seccion -->
+            </a>
+            <a href="http://sansalvadordejujuy.gob.ar/licenciadeconducir/">
+                <div class="seccion">
+                    <div class="seccion__imagen">
+                        <i class="seccion__icono bi bi-person-vcard-fill"></i>
+                    </div>
+                    <div class="seccion__contenido">
+                        <h3 class="seccion__nombre">Carnet de Conducir</h3>
+                        <p class="seccion__descripcion">Te contamos cuales son los pasos para que puedas obtener tu carnet de conducir.</p>
+                        <div class="seccion__enlace"></div>
+                    </div>
+                </div><!-- .seccion -->
+            </a>
+            <a href="http://sansalvadordejujuy.gob.ar/estacionamiento/">
+                <div class="seccion">
+                    <div class="seccion__imagen">
+                        <i class="seccion__icono bi bi-p-circle"></i>
+                    </div>
+                    <div class="seccion__contenido">
+                        <h3 class="seccion__nombre">Estacionamiento Tarifado</h3>
+                        <p class="seccion__descripcion">Ahora los usuarios también pueden pagar sus actas de infracción fácil y a través de la aplicación <b>Via Parking</b>.</p>
+                        <div class="seccion__enlace"></div>
+                    </div>
+                </div><!-- .seccion -->
+            </a>
+            <a href="http://sansalvadordejujuy.gob.ar/pases/">
+                <div class="seccion">
+                    <div class="seccion__imagen">
+                        <i class="seccion__icono bi bi-card-checklist"></i>
+                    </div>
+                    <div class="seccion__contenido">
+                        <h3 class="seccion__nombre">Pase Libre</h3>
+                        <p class="seccion__descripcion">Se encuentra habilitadas las inscripciones para realizar el <b>Pase Libre del transporte público de pasajeros</b>.</p>
+                        <div class="seccion__enlace"></div>
+                    </div>
+                </div><!-- .seccion -->
+            </a>
+            <a href="http://sansalvadordejujuy.gob.ar/recoleccion/">
+                <div class="seccion">
+                    <div class="seccion__imagen">
+                        <i class="seccion__icono bi bi-recycle"></i>
+                    </div>
+                    <div class="seccion__contenido">
+                        <h3 class="seccion__nombre">Recoleccion</h3>
+                        <p class="seccion__descripcion">Aca te contamos cuales son las recomedaciones para envolver <b>tus residuos</b> correctamente.</p>
+                        <div class="seccion__enlace"></div>
+                    </div>
+                </div><!-- .seccion -->
+            </a>
+            <a href="http://sansalvadordejujuy.gob.ar/tarjetasube/">
+                <div class="seccion">
+                    <div class="seccion__imagen">
+                        <i class="seccion__icono bi bi-credit-card"></i>
+                    </div>
+                    <div class="seccion__contenido">
+                        <h3 class="seccion__nombre">Puntos SUBE</h3>
+                        <p class="seccion__descripcion">Te dejamos informacion de los <b>puntos de recarga</b>, para que tengas siempre tu SUBE cargada a la hora de viajar.</p>
+                        <div class="seccion__enlace"></div>
+                    </div>
+                </div><!-- .seccion -->
+            </a>
+        </div><!-- .menu__grid -->
+
+        <a href="http://sansalvadordejujuy.gob.ar/guiadetramites/" target="_blank" class="menu__enlace contenedor">Mas Servicios</a>
+    </main>
+
+    <section class="radio contenedor">
+        <div class="radio__contenido">
+            <h3 class="radio__heading">¿Ya escuchaste Radio Muni?</h3>
+            <p class="radio__descripcion">Hace click en el siguiente banner para escuchar:</p>
+            <a href="https://885radiomuni.radiostream321.com/" class="radio__enlace">
+                <img class="radio__img" src="build/img/prensa-gif.gif" alt="radio muni">
+            </a>
         </div>
     </section>
+
+    <section class="canal">
+        <div class="canal__grid contenedor">
+            <div class="canal__contenido">
+                <h2 class="canal__heading">Proyecto Canal Alvarado</h2>
+                <p class="canal__descripcion">Este proyecto prevé sanear un sector, trabajar con <b>soluciones basadas en la naturaleza</b>, que es uno de los conceptos que estamos utilizando, entonces se toma la cuenca que aporta este canal y se trabaja por ejemplo <b>arborizando todos los espacios verdes</b> que están dentro de esta cuenca manteniendo en la parte alta, en frente de Ruta 9, todo el sector de vegetación</p>
+                <iframe class="canal__video" width="560" height="315" src="https://www.youtube.com/embed/fbUTrJddc2w?si=fYOgpemB7D4g3dJD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <a href="http://sansalvadordejujuy.gob.ar/proyectocanalalvarado/" target="_blank" class="canal__enlace">Leer Mas</a>
+            </div>
+        </div><!-- .canal__grid -->
+    </section>
+
+    <section class="noticias contenedor" id="noticias">
+        <h2 class="noticias__heading">Ultimas Noticias</h2>
+        <div class="noticias__grid">
+            <a href="http://sansalvadordejujuy.gob.ar/prensa/" target="_blank">
+                <div class="noticia">
+                    <div class="noticia__picture">
+                        <picture>
+                            <source srcset="build/img/prensa-1.avif" type="image/avif">
+                            <source srcset="build/img/prensa-1.webp" type="image/webp">
+                            <img class="noticia__imagen" loading="lazy" src="build/img/prensa-1.jpg" width="500" height="300" alt="imagen prensa">
+                        </picture>
+                    </div>
+                    <div class="noticia__contenido">
+                        <h3 class="noticia__nombre">Raúl “Chuli” Jorge, optimismo para una nueva gestión frente al municipio capitalino</h3>
+                        <p class="noticia__fecha"><i class="bi bi-calendar-event-fill"></i>  11 Diciembre, 2023</p>
+                        <p class="noticia__descripcion">En un emotivo acto de asunción y jura, el intendente Raul “Chuli” Jorge y sus secretarios juramentaron para una nueva gestión al frente de la Municipalidad de San Salvador de…</p>
+                    </div>
+                </div><!-- .noticia -->
+            </a>
+            <a href="http://sansalvadordejujuy.gob.ar/prensa/" target="_blank">
+                <div class="noticia">
+                    <div class="noticia__picture">
+                        <picture>
+                            <source srcset="build/img/prensa-2.avif" type="image/avif">
+                            <source srcset="build/img/prensa-2.webp" type="image/webp">
+                            <img class="noticia__imagen" loading="lazy" src="build/img/prensa-2.jpg" width="500" height="300" alt="imagen prensa">
+                        </picture>
+                    </div>
+                    <div class="noticia__contenido">
+                        <h3 class="noticia__nombre">El intendente Raúl “Chuli” Jorge asumirá un nuevo mandato en San Salvador de Jujuy</h3>
+                        <p class="noticia__fecha"><i class="bi bi-calendar-event-fill"></i>  10 Diciembre, 2023</p>
+                        <p class="noticia__descripcion">El próximo lunes 11 de Diciembre a las 11 horas, en el Centro Cultural Éxodo Jujeño, se llevará a cabo la ceremonia de asunción del intendente Raúl “Chuli” Jorge, quien…</p>
+                    </div>
+                </div><!-- .noticia -->
+            </a>
+            <a href="http://sansalvadordejujuy.gob.ar/prensa/" target="_blank">
+                <div class="noticia">
+                    <div class="noticia__picture">
+                        <picture>
+                            <source srcset="build/img/prensa-3.avif" type="image/avif">
+                            <source srcset="build/img/prensa-3.webp" type="image/webp">
+                            <img class="noticia__imagen" loading="lazy" src="build/img/prensa-3.jpg" width="500" height="300" alt="imagen prensa">
+                        </picture>
+                    </div>
+                    <div class="noticia__contenido">
+                        <h3 class="noticia__nombre">El intendente Jorge encendió el árbol de Navidad ecológico en Chijra</h3>
+                        <p class="noticia__fecha"><i class="bi bi-calendar-event-fill"></i>  9 Diciembre, 2023</p>
+                        <p class="noticia__descripcion">Como cada año, el Centro de Participación vecinal del barrio Chijra preparó la icónica ornamentación urbana de material reciclable que decora las instalaciones municipales y que ya se volvió una…</p>
+                    </div>
+                </div><!-- .noticia -->
+            </a>
+                <a href="http://sansalvadordejujuy.gob.ar/prensa/" target="_blank">
+                <div class="noticia">
+                    <div class="noticia__picture">
+                        <picture>
+                            <source srcset="build/img/primicia_1.avif" type="image/avif">
+                            <source srcset="build/img/primicia_1.webp" type="image/webp">
+                            <img class="noticia__imagen" loading="lazy" src="build/img/primicia_1.jpg" width="500" height="300" alt="imagen prensa">
+                        </picture>
+                    </div>
+                    <div class="noticia__contenido">
+                        <h3 class="noticia__nombre">Cierre de actividades deportivas en Multiespacio El Alto</h3>
+                        <p class="noticia__fecha"><i class="bi bi-calendar-event-fill"></i>  17 Diciembre, 2023</p>
+                        <p class="noticia__descripcion">En el Multiespacio El Alto, la Dirección de Deportes del Distrito Alto Comedero realizó el cierre de actividades con una jornada a pleno deporte para niños, niñas, adolescentes adultos y…</p>
+                    </div>
+                </div><!-- .noticia -->
+            </a>
+            <a href="http://sansalvadordejujuy.gob.ar/prensa/" target="_blank">
+                <div class="noticia">
+                    <div class="noticia__picture">
+                        <picture>
+                            <source srcset="build/img/primicia_2.avif" type="image/avif">
+                            <source srcset="build/img/primicia_2.webp" type="image/webp">
+                            <img class="noticia__imagen" loading="lazy" src="build/img/primicia_2.jpg" width="500" height="300" alt="imagen prensa">
+                        </picture>
+                    </div>
+                    <div class="noticia__contenido">
+                        <h3 class="noticia__nombre">Entregaron más de 80 certificados y subsidios a beneficiarios de los programas PEI Y CIT</h3>
+                        <p class="noticia__fecha"><i class="bi bi-calendar-event-fill"></i>  17 Diciembre, 2023</p>
+                        <p class="noticia__descripcion">La Oficina de Empleo del municipio capitalino hizo entrega en las instalaciones del Club de Emprendedores, más de 80 certificaciones por capacitaciones a todos los beneficiarios inscriptos en el Programa…</p>
+                    </div>
+                </div><!-- .noticia -->
+            </a>
+            <a href="http://sansalvadordejujuy.gob.ar/prensa/" target="_blank">
+                <div class="noticia">
+                    <div class="noticia__picture">
+                        <picture>
+                            <source srcset="build/img/primicia_3.avif" type="image/avif">
+                            <source srcset="build/img/primicia_3.webp" type="image/webp">
+                            <img class="noticia__imagen" loading="lazy" src="build/img/primicia_3.jpg" width="500" height="300" alt="imagen prensa">
+                        </picture>
+                    </div>
+                    <div class="noticia__contenido">
+                        <h3 class="noticia__nombre">Exitosa jornada de cierre en Centros de Participación Vecinal municipales</h3>
+                        <p class="noticia__fecha"><i class="bi bi-calendar-event-fill"></i>  17 Diciembre, 2023</p>
+                        <p class="noticia__descripcion">En un emotivo cierre de año, los Centros de Participación Vecinal (CPV) dependientes de la Secretaría de Gobierno de la Municipalidad de San Salvador de Jujuy celebraron una jornada de…</p>
+                    </div>
+                </div><!-- .noticia -->
+            </a>
+        </div><!-- .noticias__grid -->
+
+        <div class="noticias__link">
+            <a href="http://sansalvadordejujuy.gob.ar/prensa/" target="_blank" class="noticias__enlace">Mas Noticias</a>
+        </div>
+    </section><!-- .noticias -->
+
+    <section class="violencia" title="violencia de genero">
+        <div class="violencia__grid contenedor">
+            <div class="violencia__texto">
+                <h2 class="violencia__heading">Si conoces a alguien que vive alguna situacion de <span class="violencia__negrita">Violencia</span> <span class="violencia__span">Llama gratis al 144.</span><span class="violencia__negrita">¡No estas sola!</span></h2>
+                <a href="http://sansalvadordejujuy.gob.ar/paridaddegenero/" target="_blank" class="violencia__enlace">Mas Detalles</a>
+            </div>
+            <div class="violencia__contenido" title="direccion paridad de genero">
+                <h3 class="violencia__titulo">Dirección Paridad de Género</h3>
+                <p class="violencia__descripcion">Guia de recursos para el reconocimiento y acompañamiento en situaciones de violencias.</p>
+                <p class="violencia__descripcion">Comunicate con nosotros: 
+                    <span class="violencia__descripcion-salto"><b>Alto Comedero</b> - <a href="#" class="violencia__numero">388-4383277</a></span></p>
+                <p class="violencia__descripcion"><b>Para el resto de la ciudad</b> - <a href="#" class="violencia__numero">388-4383277</a></p>
+                <picture>
+                    <source srcset="build/img/genero_2.avif" type="image/avif">
+                    <source srcset="build/img/genero_2.webp" type="image/webp">
+                    <img class="violencia__imagen" loading="lazy" src="build/img/genero_2.jpg" width="500" height="300" alt="">
+                </picture>
+            </div>
+        </div><!-- .violencia__grid -->
+    </section>
+
+    <footer class="footer" title="footer">
+        <div class="footer__grid contenedor">
+            <div class="footer__widget">
+                
+                <nav class="navegacion footer-nav">
+                    <a href="#servicios" class="navegacion__enlace navegacion__enlace--footer">Tramites y Servicios</a>
+                    <a href="#noticias" class="navegacion__enlace navegacion__enlace--footer">Noticias</a>
+                    <a href="contacto.html" class="navegacion__enlace navegacion__enlace--footer">Contacto</a>
+                </nav>
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/MunicipalidadSanSalvadorJujuy/" class="footer__enlace" title="Facebook">
+                        <i class="bi bi-facebook footer__face"></i>
+                    </a>
+                    <a href="https://www.instagram.com/munijujuy/?hl=es-la" class="footer__enlace" title="Instagram">
+                        <i class="bi bi-instagram footer__insta"></i>
+                    </a>
+                    <a href="https://twitter.com/munissdejujuy" class="footer__enlace" title="Twitter">
+                        <i class="bi bi-twitter-x footer__twitter"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCkVdReeh7ZbEY8ODsusVNJg/featured" class="footer__enlace" title="Youtube">
+                        <i class="bi bi-youtube footer__youtube"></i>
+                    </a>
+                </div>
+                <div class="footer__contacto">
+                    <div class="footer__flex-contacto">
+                        <i class="footer__icono bi bi-geo-alt-fill"></i>
+                        <p class="footer__descripcion">Av. El Éxodo N° 215 San Salvador de Jujuy, Argentina</p>
+                    </div>
+                    <div class="footer__flex-contacto">
+                        <i class="footer__icono bi bi-envelope-fill"></i>
+                        <p class="footer__descripcion"><a class="footer__mail" href="mailto:info@sansalvadordejujuy.gob.ar">info@sansalvadordejujuy.gob.ar</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__widget footer__widget--dos">
+                <div class="footer__imagen">
+                    <picture>
+                        <source srcset="build/img/logo_jujuy.avif" type="image/avif">
+                        <source srcset="build/img/logo_jujuy.webp" type="image/webp">
+                        <img class="footer__imagen-jujuy" loading="lazy" src="build/img/logo_jujuy.png" width="500" height="300" alt="logo jujuy">
+                    </picture>
+                </div>
+                <div class="footer__imagen">
+                    <picture>
+                        <source srcset="build/img/logo-muni.avif" type="image/avif">
+                        <source srcset="build/img/logo-muni.webp" type="image/webp">
+                        <img class="footer__imagen-muni" loading="lazy" src="build/img/logo-muni.png" width="500" height="300" alt="logo municipalidad">
+                    </picture>
+                </div>
+            </div>
+        </div>
+        <p class="footer__copy">
+            Municipalidad de San Salvador de Jujuy. &copy;
+            <span class="footer__span">Diseñado por <a href="#" class="footer__copy-link">Miguel Agustin Baiud</a></span>
+        </p>
+    </footer>
 
     <script src="js/imagenes.js"></script>
 </body>

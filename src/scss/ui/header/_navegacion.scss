@@ -12,14 +12,14 @@
         width: auto;
     }
     &__enlace{
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         font-size: 1.8rem;
         font-weight: 700;
         padding: 1rem;
         width: 100%;
         text-align: center;
         position: relative;
-        &:after{
+        &::after{
             content: '';
             position: absolute;
             bottom: 1rem;
@@ -29,7 +29,7 @@
             transition: width .4s;
         }
         &:hover{
-            &:after{
+            &::after{
                 background-color: v.$verde;
                 width: 100%;
             }
@@ -40,6 +40,14 @@
         @include m.tablet { 
             margin-bottom: 0;
             width: auto;
+        }
+        &--footer{
+            font-size: 1.6rem;
+            @include m.desktop { 
+                &:first-of-type{
+                    padding-left: 0;
+                }
+            }
         }
     }
 }

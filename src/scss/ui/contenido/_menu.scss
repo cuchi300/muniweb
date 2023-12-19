@@ -1,0 +1,77 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.menu{
+    background-color: transparentize(v.$grisClaro, .7);
+    padding: 5rem 0;
+    margin-bottom: 2rem;
+    &__heading{
+        text-align: center;
+        color: v.$celeste;
+        padding-bottom: 3rem;
+        font-size: 3rem;
+        @include m.tablet { 
+            font-size: 4rem;
+        }
+    }
+    &__grid{
+        display: grid;
+        grid-template-columns:repeat( auto-fit, minmax(30rem, 1fr));
+        gap: 5rem;
+    }
+    &__enlace{
+        @include m.boton(v.$verde, v.$blanco);
+        margin-top: 3rem;
+        @include m.tablet { 
+            display: block;
+        }
+    }
+}
+
+.seccion{
+    text-align: center;
+    position: relative;
+    padding: 3rem;
+    border-radius: 1rem;
+    transition: box-shadow .3s;
+    overflow: hidden;
+    &::before{
+        content: '';
+        position: absolute;
+        background-color: lighten(v.$grisOscuro, 45%);
+        top: -5rem;
+        right: -5rem;
+        width: 130%;
+        z-index: -1;
+        height: 0;
+        transition: height .5s;
+        transform: rotate(15deg);
+    }
+    &:hover{
+        &::before{
+            height: 160%;
+            background-color: lighten(v.$grisOscuro, 45%)
+        }
+    }
+    &__icono{
+        font-size: 4rem;
+        color: v.$celeste;
+        z-index: 2;
+    }
+    &:hover &__icono{
+        color: darken(v.$celeste, 5%);
+    }
+    &__contenido{
+        z-index: 2;
+    }
+    &__nombre{
+        font-size: 2rem;
+        color: darken(v.$verde, 5%);
+    }
+    &:hover &__nombre{
+        color: v.$verde;
+    }
+    &__descripcion{
+        font-size: 1.8rem;
+    }
+}

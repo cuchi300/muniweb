@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Municipalidad De San Salvador de Jujuy</title>
+    <!-- font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- icon bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+<body>
+    <header class="header" id="inicio">
+        <div class="header__grid contenedor">
+            <div class="header__logo" title="logo municipalidad">
+                <a href="index.html" class="hero__enlace">
+                    <picture>
+                        <source srcset="build/img/logo-muni.avif" type="image/avif">
+                        <source srcset="build/img/logo-muni.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/logo-muni.png" width="500" height="300" alt="logo municipalidad">
+                    </picture>
+                </a>
+            </div><!-- .header__logo -->
+
+            <nav class="navegacion">
+                <a href="#servicios" class="navegacion__enlace">Tramites y Servicios</a>
+                <a href="#noticias" class="navegacion__enlace">Noticias</a>
+                <a href="index.html" class="navegacion__enlace">Contacto</a>
+            </nav>
+        </div><!-- .header__grid -->
+    </header>
+
+    <main class="contacto">
+        <div class="contacto__hero">
+            <h2 class="contacto__heading">Contactanos</h2>
+        </div>
+        <div class="contacto__grid contenedor">
+            <form class="formulario" action="">
+                <fieldset class="formulario__fieldset">
+                    <legend class="formulario__legend">Rellena el Formulario</legend>
+                    <div class="formulario__campo">
+                        <label class="formulario__label" for="nombre">Nombre y Apellido:</label>
+                        <input class="formulario__input" type="text" id="nombre" placeholder="Ej: Agustin Baiud" required>
+                    </div>
+
+                    <div class="formulario__campo">
+                        <label class="formulario__label" for="email">Email:</label>
+                        <input class="formulario__input" type="email" id="email" placeholder="Ej: correo@corre.com">
+                    </div>
+                    
+                    <div class="formulario__campo">
+                        <label class="formulario__label" for="telefono">Telefono/Celular:</label>
+                        <input class="formulario__input" type="tel" id="telefono" placeholder="Ej: 3885800472">
+                    </div>
+
+                    <div class="formulario__campo">
+                        <label class="formulario__label" for="barrio">Barrio:</label>
+                        <select class="formulario__input" name="" id="barrio" required>
+                            <option selected disabled>--Selecciona--</option>
+                            <option value="Alto Comedero">Alto Comedero</option>
+                            <option value="Chijra">Chijra</option>
+                            <option value="Cuyaya">Cuyaya</option>
+                            <option value="Huaico">Huaico</option>
+                            <option value="Villa Jardin de Reyes">Villa Jardin de Reyes</option>
+                            <option value="Los Perales">Los Perales</option>
+                            <option value="Alto La Viña">Alto La Viña</option>
+                            <option value="San Pedrito">San Pedrito</option>
+                            <option value="Sargento Cabral">Sargento Cabral</option>
+                            <option value="San Pablo de Reyes">San Pablo de Reyes</option>
+                            <option value="Yala">Yala</option>
+                            <option value="Punta Diamante">Punta Diamante</option>
+                            <option value="Bajo La Viña">Bajo La Viña</option>
+                            <option value="9 de Julio">9 de Julio</option>
+                            <option value="Alto Padilla">Alto Padilla</option>
+                            <option value="Centro">Centro</option>
+                            <option value="Campo Verde">Campo Verde</option>
+                            <option value="Almirante Brown">Almirante Brown</option>
+                        </select>
+                    </div>
+
+                    <div class="formulario__campo">
+                        <label class="formulario__label" for="mensaje">Dejanos tu mensaje:</label>
+                        <textarea class="formulario__area" id="mensaje"></textarea>
+                    </div>
+                </fieldset>
+
+                <div class="formulario__campo">
+                    <input class="formulario__input formulario__input--submit" type="submit" value="Enviar">
+                </div>
+            </form><!-- .formulario -->
+        </div>
+    </main>
+
+    <footer class="footer" title="footer">
+        <div class="footer__grid contenedor">
+            <div class="footer__widget">
+                
+                <nav class="navegacion footer-nav">
+                    <a href="#inicio" class="navegacion__enlace navegacion__enlace--footer">Inicio</a>
+                    <a href="#servicios" class="navegacion__enlace navegacion__enlace--footer">Tramites y Servicios</a>
+                    <a href="#noticias" class="navegacion__enlace navegacion__enlace--footer">Noticias</a>
+                    <a href="index.html" class="navegacion__enlace navegacion__enlace--footer">Contacto</a>
+                </nav>
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/MunicipalidadSanSalvadorJujuy/" class="footer__enlace" title="Facebook">
+                        <i class="bi bi-facebook footer__face"></i>
+                    </a>
+                    <a href="https://www.instagram.com/munijujuy/?hl=es-la" class="footer__enlace" title="Instagram">
+                        <i class="bi bi-instagram footer__insta"></i>
+                    </a>
+                    <a href="https://twitter.com/munissdejujuy" class="footer__enlace" title="Twitter">
+                        <i class="bi bi-twitter-x footer__twitter"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCkVdReeh7ZbEY8ODsusVNJg/featured" class="footer__enlace" title="Youtube">
+                        <i class="bi bi-youtube footer__youtube"></i>
+                    </a>
+                </div>
+                <div class="footer__contacto">
+                    <div class="footer__flex-contacto">
+                        <i class="footer__icono bi bi-geo-alt-fill"></i>
+                        <p class="footer__descripcion">Av. El Éxodo N° 215 San Salvador de Jujuy, Argentina</p>
+                    </div>
+                    <div class="footer__flex-contacto">
+                        <i class="footer__icono bi bi-envelope-fill"></i>
+                        <p class="footer__descripcion"><a class="footer__mail" href="mailto:info@sansalvadordejujuy.gob.ar">info@sansalvadordejujuy.gob.ar</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__widget footer__widget--dos">
+                <div class="footer__imagen">
+                    <picture>
+                        <source srcset="build/img/logo_jujuy.avif" type="image/avif">
+                        <source srcset="build/img/logo_jujuy.webp" type="image/webp">
+                        <img class="footer__imagen-jujuy" loading="lazy" src="build/img/logo_jujuy.png" width="500" height="300" alt="logo jujuy">
+                    </picture>
+                </div>
+                <div class="footer__imagen">
+                    <picture>
+                        <source srcset="build/img/logo-muni.avif" type="image/avif">
+                        <source srcset="build/img/logo-muni.webp" type="image/webp">
+                        <img class="footer__imagen-muni" loading="lazy" src="build/img/logo-muni.png" width="500" height="300" alt="logo municipalidad">
+                    </picture>
+                </div>
+            </div>
+        </div>
+        <p class="footer__copy">
+            Municipalidad de San Salvador de Jujuy. &copy;
+            <span class="footer__span">Diseñado por <a href="#" class="footer__copy-link">Miguel Agustin Baiud</a></span>
+        </p>
+    </footer>
+
+    <script src="js/imagenes.js"></script>
+</body>
+</html>

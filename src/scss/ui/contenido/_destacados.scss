@@ -2,17 +2,17 @@
 @use 'base/mixins' as m;
 
 .destacados{
-    background-image: url(../img/trofeo.png);
+    background-image: url(../img/trofeo_2.jpg);
+    background-position: 5rem 25rem;
     background-repeat: no-repeat;
-    background-size: 110%;
-    background-position: 20rem 5rem;
+    background-size: 140%;
     @include m.tablet { 
-        background-position: 50rem 8rem;
-        background-size: 60%;
+        background-position: 25rem 5rem;
+        background-size: 108%;
     }
-    @include m.desktop { 
-        background-position: 80rem 5rem; 
-        background-size: 35%; 
+    @include m.desktop {
+        background-position: 57rem -10rem; 
+        background-size: 70%; 
     }
     &__grid{
         @include m.tablet { 
@@ -20,7 +20,7 @@
         }
     }
     &__contenido{
-        padding: 10rem 0;
+        padding: 5rem 0;
         @include m.tablet { 
             grid-column: 1/5;   
         }
@@ -30,46 +30,46 @@
 
     }
     &__heading{
-        line-height: 1.2;
-        position: relative;
-        color: v.$celeste;
-        font-size: 4rem;
+        @include m.heading;
+        font-size: 3rem;
         @include m.tablet { 
-            font-size: 5rem;
+            font-size: 4rem;
         }
         @include m.desktop { 
-            font-size: 6rem;
-        }
-        &::before{
-            content: '#';
-            position: absolute;
-            z-index: -1;
-            top: -6rem;
-            left: 0;
-            font-size: 12rem;
-            color: v.$grisOscuro;
-            @include m.tablet {
-                top: -8rem;
-                left: -2rem;
-                font-size: 15rem;
-            }
-            @include m.desktop {
-                top: -8rem;
-                left: -6rem;
-                font-size: 18rem;
-            }
+            font-size: 5rem;
         }
     }
     &__descripcion{
-        font-size: 2.2rem;
+        font-size: 2rem;
         margin: 3rem 0;
         line-height: 1.8;
         color: v.$negro;
         @include m.desktop { 
-            font-size: 2.5rem
+            font-size: 2.2rem
+        }
+    }
+    &__enlaces{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        @include m.tablet { 
+            align-items: flex-start;
+        }
+        @include m.desktop { 
+            flex-direction: row;
         }
     }
     &__enlace{
         @include m.boton(v.$celeste, v.$blanco);
+        &:hover{
+            background-color: darken(v.$celeste, 5%);
+            opacity: 1;
+        }
+        &--inscripcion{
+            background-color: v.$verde;
+            &:hover{
+                background-color: darken(v.$verde, 5%);
+            }
+        }
     }
 }
