@@ -36,6 +36,7 @@
     }
     &__contenido{
         background-color: transparentize(v.$grisClaro, .8);
+        backdrop-filter: blur(.5rem);
         height: max-content;
         padding: 3rem;
         border-radius: 1rem;
@@ -48,7 +49,7 @@
     }
     &__descripcion{
         color: v.$grisClaro;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         @include m.tablet { 
             font-size: 2.2rem;
         }

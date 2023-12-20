@@ -48,9 +48,11 @@
         transform: rotate(15deg);
     }
     &:hover{
-        &::before{
-            height: 160%;
-            background-color: lighten(v.$grisOscuro, 45%)
+        @include m.desktop { 
+            &::before{
+                height: 160%;
+                background-color: lighten(v.$grisOscuro, 45%)
+            }
         }
     }
     &__icono{
